@@ -23,7 +23,7 @@ public class WatchlistDaoImpl implements WatchlistDao{
     @Override
     public WatchlistEntity save(WatchlistEntity watchlist,Long memberId, List<Long> movieIds) {
         List<MovieEntity> allByIdIn = movieJpaRepository.findAllByIdIn(movieIds);
-        watchlist.setOwner(memberJpaRepository.getById(memberId));
+        watchlist.setMember(memberJpaRepository.getById(memberId));
         WatchlistEntity saved = watchlistJpaRepository.save(watchlist);
         List<MovieWLEntity> collect = allByIdIn.stream()
                 .map(a -> {
@@ -43,5 +43,10 @@ public class WatchlistDaoImpl implements WatchlistDao{
         if (retrieve.isPresent()){
             return retrieve.get();
         }else throw new RuntimeException();
+    }
+
+    @Override
+    public List<WatchlistEntity> retrieveByMemberId(Long memberId) {
+        return watchlistJpaRepository.findAllByMemberId(memberId);
     }
 }

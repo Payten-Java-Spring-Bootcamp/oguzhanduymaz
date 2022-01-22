@@ -5,9 +5,11 @@ import com.homework.bootcamp.repository.rate.RateEntity;
 import com.homework.bootcamp.service.member.Member;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
+@Setter
 @Getter
 @Builder
 public class Rate {

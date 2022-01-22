@@ -51,4 +51,10 @@ public class WatchlistServiceImpl implements WatchlistService{
         }
 
     }
+
+    @Override
+    public List<Watchlist> retrieveAll(Long memberId) {
+        List<WatchlistEntity> watchlistEntities = watchlistDao.retrieveByMemberId(memberId);
+        return watchlistEntities.stream().map(Watchlist::convertFrom).collect(Collectors.toList());
+    }
 }

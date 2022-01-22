@@ -19,7 +19,7 @@ public class RateResponse {
     private static RateResponse convertFromRate(Rate rate){
         return RateResponse.builder()
                 .createdDate(rate.getCreatedDate())
-                .memberId(rate.getMember().getId())
+                .memberId(rate.getMemberId())
                 .movieId(rate.getMovieId())
                 .point(rate.getPoint())
                 .build();

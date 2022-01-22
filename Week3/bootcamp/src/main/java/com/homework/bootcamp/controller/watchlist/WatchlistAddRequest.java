@@ -11,5 +11,4 @@ import java.util.List;
 public class WatchlistAddRequest {
     private Long watchlistId;
     private List<Long> moviesIds;
-    private LocalDateTime createdDate;
 }

@@ -3,6 +3,7 @@ package com.homework.bootcamp.controller.actor;
 import com.homework.bootcamp.service.actor.Actor;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -10,6 +11,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
 public class ActorCreateRequest {
     @NotBlank
     private String name;
