@@ -13,10 +13,22 @@ public class operatorsTests {
     public void testMap(){
         Assert.assertEquals(Arrays.asList(1,4,9), Operators.map(Arrays.asList(1,2,3)));
     }
+
+
+
+
+
+
     @Test
     public void testConcat(){
+        //                      BEKLENEN                        GIRILEN
         Assert.assertEquals(Arrays.asList("abc","de"), Operators.concat(Arrays.asList("abc"),Arrays.asList("de")));
     }
+
+
+
+
+
     @Test
     public void testRemove(){
         Assert.assertEquals(Arrays.asList(1,2), Operators.remove(Arrays.asList(1,2,3,3,4,4),Arrays.asList(3,4)));

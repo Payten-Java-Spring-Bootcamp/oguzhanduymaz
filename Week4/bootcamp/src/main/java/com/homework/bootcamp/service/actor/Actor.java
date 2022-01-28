@@ -1,9 +1,7 @@
 package com.homework.bootcamp.service.actor;
 
 import com.homework.bootcamp.repository.actor.ActorEntity;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -15,6 +13,8 @@ public class Actor {
     private Long id;
     private String name;
     private LocalDateTime birthDate;
+
+
 
     public ActorEntity convertToActorEntity() {
         ActorEntity actorEntity = new ActorEntity();
@@ -30,4 +30,5 @@ public class Actor {
                 .birthDate(entity.getBirthDate())
                 .build();
     }
+
 }
