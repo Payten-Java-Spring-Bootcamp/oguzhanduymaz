@@ -17,6 +17,9 @@ import java.time.Duration;
 @Configuration
 public class RedisConfig {
 
+    // TODO CACHE
+
+
     @Bean
     public LettuceConnectionFactory lettuceConnectionFactory() {
         RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration();
